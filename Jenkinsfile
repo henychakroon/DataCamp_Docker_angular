@@ -2,7 +2,7 @@ pipeline {
 agent any
 tools{ jdk 'JDK17' }
 environment {
-JAVA_HOME ='/usr/lib/jvm/java-17-openjdk-amd64/'
+JAVA_HOME ='C:\\Program Files\\Java\\jdk-17'
 DOCKER_TAG = getVersion()
 }
 stages {
