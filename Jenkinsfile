@@ -18,10 +18,7 @@ sh 'docker build -t henychakroon/aston-villa:${DOCKER_TAG}.'
 }
 }
 }
-#def getVersion(){
-#def version = sh returnStdout: true, script: 'git rev-parse --short HEAD'
-#return version
-#}
+
   def getVersion() {
     def version = bat(script: 'git rev-parse --short HEAD', returnStdout: true).trim()
     return version
