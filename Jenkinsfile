@@ -24,7 +24,9 @@ bat 'docker build -t henychakroon/aston-villa:%DOCKER_TAG% .'
 
   def getVersion() {
     def version = bat returnStdout: true, script: '''
-git rev-parse --short HEAD
-'''
+    git rev-parse --short HEAD
+    '''
+    version = version.substring(0, output.lastIndexOf('Finished'))
+    bat echo version
     return version
 }
